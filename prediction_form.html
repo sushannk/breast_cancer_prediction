@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prediction form</title>
+
+    <style>
+        *{margin: 0;
+         padding: 0; }
+body{
+    background-image: linear-gradient(rgb(58 152 173 / 57%), rgb(146 190 10 / 50%));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+        
+    border-width: 10px;
+    border-color: rgb(85, 85, 6);
+    border-style: solid;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 6px;
+}
+header{
+    background: black;
+}
+nav{
+    display: flex;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 90px;
+    padding: 0 45px;
+}
+nav ul{
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    padding: 0 33px;
+    font-size: 23px;
+} 
+nav ul li a{
+    color: white;
+    text-decoration: none;
+} 
+nav ul li a:hover{
+    font-weight: bolder;
+}
+.heading{
+    margin: 50px 0;
+    background-color: rgb(4, 73, 69);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    columns: #fff;
+    text-transform: uppercase;
+    transition: all 4s ease-in;
+}
+.heading h1{
+    font-size: 32px;
+    line-height: 50px;
+}
+.center h1{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: rgb(46 75 179);
+    margin-bottom: 50px;
+}
+.fill_form h1{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+form{
+    margin-top: 0;
+    margin-bottom: 25px;
+    transition: all 4s ease-in-out;
+}
+.prediction_form{
+    width: 1480px;
+    /* margin: 3% auto; */
+}
+.form-area {
+    display: flex;
+    background: rgba(31, 30, 30, 0.8);
+    border-radius: 20px;
+    padding: 1em;
+}
+#radius_mean{
+    display: flex;
+    flex-direction: column;
+    order: 2;
+}
+input{
+    width: 295px;
+    padding: 1.1em;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+label{
+    color: #fff;
+    text-transform: none;
+    line-height: 10px;
+    font-family: Audiowide;
+}
+.details_button{
+    padding: 1em;
+    margin-bottom: 10px;
+}
+button{
+    background: rgb(34, 79, 175);
+    color: #fff;
+    border: 0;
+    padding: 15px 50px;
+    border-radius: 50px;
+    font-family: poppins;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}    
+button:hover{
+    font-weight: bolder;
+}
+.flex-all-center{
+    height: 7vh;
+    background: rgb(28, 29, 31);
+    color: white;
+    margin-top: 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/img.logo3.png" alt="">
+            </div>
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="heading">
+        <h1><u>  prediction form</u></h1>
+    </div>
+
+    <div class="center">
+    </center>
+        <h1> {{prediction_text}} </h1>
+    </center>   
+    </div>
+
+    <div class="fill_form">
+        <h1>*** Fill the details below by referring your medical report ***</h1>
+    </div>
+
+
+    <div class="prediction_form">
+
+        <form action="{{url_for('predict')}}" method='post' class="form-area" >
+
+            <div class="min_max">
+                <input type="number" step="any" name="radius_mean" min="5" max="30" placeholder="(RANGE: 5 - 30)" required="required">
+                <label for="radius_mean"><b> radius mean</b></label>
+            
+                <input type="number" step="any" name="radius_se"  min="0" max="3" placeholder="(RANGE: 0 - 3)" required="required">
+                <label for="radius_se"><b> radius se </b></label>
+            
+                <input type="number" step="any" name="radius_worst"  min="6" max="37" placeholder="(RANGE: 6 - 37)" required="required">
+                <label for="radius_worst"><b> radius worst </b></label>
+          
+                <input type="number" step="any" name="texture_mean"  min="10" max="40" placeholder="(RANGE: 10 - 40)" required="required">
+                <label for="texture_mean"><b> texture mean</b></label>
+              
+                <input type="number" step="any" name="texture_se"  min="0" max="5" placeholder="(RANGE: 0 - 5)" required="required">
+                <label for="texture_se"><b> texture se </b></label>
+             
+                <input type="number" step="any" name="texture_worst"  min="12" max="50" placeholder="(RANGE: 12 - 50)" required="required">
+                <label for="texture_worst">texture worst</label>
+          
+                <input type="number" step="any" name="perimeter_mean"  min="40" max="200" placeholder="(RANGE: 40 - 200)" required="required">
+                <label for="perimeter_mean">perimeter mean</label>
+             
+                <input type="number" step="any" name="perimeter_se"  min="10" max="22" placeholder="(RANGE: 10 - 22)" required="required">
+                <label for="perimeter_se">perimeter se</label>
+               
+                <input type="number" step="any" name="perimeter_worst"  min="50" max="255" placeholder="(RANGE: 50 - 255)" required="required">
+                <label for="perimeter_worst">perimeter worst</label>
+          
+                <input type="number" step="any" name="area_mean"  min="140" max="2550" placeholder="(RANGE: 140 - 2550)" required="required">
+                <label for="area_mean">area mean</label>
+
+                <input type="number" step="any" name="area_se"  min="5" max="545" placeholder="(RANGE: 5 - 545)" required="required">
+                <label for="area_se">area se</label>
+
+                <input type="number" step="any" name="area_worst"  min="184" max="4255" placeholder="(RANGE: 184 - 4255)" required="required">
+                <label for="area_worst">area worst</label>
+          
+                <input type="number" step="any" name="smoothness_mean"  min="5" max="30" placeholder="(RANGE: 5 - 30)" required="required">
+                <label for="smoothness_mean">smoothness mean</label>
+
+                <input type="number" step="any" name="smoothness_se" min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="smoothness_se">smoothness se</label>
+
+                <input type="number" step="any" name="smoothness_worst" min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="smoothness_worst">smoothness worst</label>
+         
+                <input type="number" step="any" name="compactness_mean" min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="compactness_mean">compactness mean</label>
+
+                <input type="number" step="any" name="compactness_se"  min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="compactness_se">compactness se</label>
+
+                <input type="number" step="any" name="compactness_worst"  min="0" max="2" placeholder="(RANGE: 0 - 2)" required="required">
+                <label for="compactness_worst">compactness worst</label>
+          
+                <input type="number" step="any" name="concavity_mean"  min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="concavity_mean">concavity mean</label>
+
+                <input type="number" step="any" name="concavity_se"  min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="concavity_se">concavity se</label>
+
+                <input type="number" step="any" name="concavity_worst"  min="0" max="2" placeholder="(RANGE: 0 - 2)" required="required">
+                <label for="concavity_worst">concavity worst</label>
+          
+                <input type="number" step="any" name="concave points_mean"  min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="concave points_mean">concave points mean</label>
+
+                <input type="number" step="any" name="concave points_se"  min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="concave points_se">concave points se</label>
+
+                <input type="number" step="any" name="concave points_worst"  min="0" max="1"
+                placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="concave points_worst">concave points worst</label>
+          
+                <input type="number" step="any" name="symmetry_mean"  min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="symmetry_mean">symmetry mean</label>
+
+                <input type="number"  step="any" name="symmetry_se"  min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="symmetry_se">symmetry se</label>
+
+                <input type="number"  step="any"name="symmetry_worst"  min="0" max="1" placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="symmetry_worst">symmetry worst</label>
+          
+                <input type="number" step="any" name="fractal_dimension_mean"  min="0" max="1"  placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="fractal_dimension_mean">fractal dimension mean</label>
+
+                <input type="number" step="any" name="fractal_dimension_se"  min="0" max="1"  placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="fractal_dimension_se">fractal dimension se</label>
+
+                <input type="number" step="any" name="fractal_dimension_worst"  min="0" max="1"   placeholder="(RANGE: 0 - 1)" required="required">
+                <label for="fractal_dimension_worst">fractal dimension worst</label>
+            
+                <div class="details_button">
+                    <button type="submit">submit</button>
+                    <button type="reset">reset</button>
+                </div>
+            </div>
+        </form>    
+    </div>
+
+   
+    <div>
+        <footer class="flex-all-center">
+            <p>&copy; DATA TREKKERS 2022, BCAS</p>
+        </footer>
+    </div>
+    
+</body>
+
+</html>

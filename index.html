@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" content="this is discription">
+    <meta name="keyword" content="breast cancer, cancer analysis, cancer, cancer prediction, begnin cancer, malignant cancer, cancer symptom, tumour">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <title>BREAST CANCER ANALYSIS</title>
+
+                         <!--css-->
+     <style>
+         *{margin: 0;
+           padding: 0;}
+ body{
+    background-image: linear-gradient(rgb(58 152 173 / 57%), rgb(146 190 10 / 50%));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    border-width: 10px;
+    border-color: rgb(85, 85, 6);
+    border-style: solid;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 2px;
+}
+ header{
+     background-color: rgb(9, 10, 10);
+     position: fixed;
+     width: 98%;
+     border-radius: 5px;
+}
+nav{
+    display: flex;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 90px;
+    padding: 0 45px;
+}
+nav ul {
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    padding: 0 35px;
+    font-size: 25px;
+}
+nav ul .sixth{
+    padding: 220px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    font-weight: bolder;
+} 
+.zero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+ .image1{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-width: 5px;
+    border-color: rgb(16, 18, 19);
+    border-style: solid;
+    margin: 0 513px;
+    border-radius: 7px;
+}        
+ .image2{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-width: 5px;
+    border-color: rgb(17, 16, 17);
+    border-style: solid;
+    margin: 0 538px;
+    border-radius: 7px;
+ }        
+ .image3{
+    display: flex;
+       justify-content: center;
+       align-items: center; 
+       border-width: 5px;
+       border-color: rgb(0, 0, 0);
+       border-style: solid;
+       margin: 0 419px;
+       border-radius: 7px;
+ }        
+ .image4{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-width: 5px;
+    border-color: rgb(8, 8, 8);
+    border-style: solid;
+    margin: 0 513px;
+    border-radius: 7px;
+}   
+ .image5{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    margin: 0 513px;
+    border-radius: 7px;
+}             
+h2{
+    margin: 15px ;
+}
+.first {
+        color: rgba(12,7,7);
+        font-size: 23px; 
+        font-style: oblique;
+        margin: 20px 60px; 
+          /* padding: 8px; */
+       }
+.symptoms {
+          color: rgba(12,7,7);  
+          font-size: 23px;
+          font-style: oblique; 
+          margin: 25px 60px;   
+          }
+.diagnose {
+          color: rgba(12,7,7);
+          font-size: 23px;
+          font-style: oblique;
+          margin: 25px 60px;     
+          }
+.benign {
+          color: rgba(12,7,7);
+          font-size: 23px;
+          font-style: oblique;  
+          margin: 25px 60px;        
+        }
+.malignant{
+          color: rgba(12,7,7); 
+          font-size: 23px;
+          font-style: oblique;
+          margin: 25px 60px;     
+          }
+.sixth{
+        text-align: center;
+        font-size: 23px; 
+        margin: 20px;
+}
+.sixth button{
+    background: rgb(26, 141, 41);
+    color: #fff;
+    border: 0;
+    padding: 15px 50px;
+    border-radius: 50px;
+    font-family: poppins;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+    cursor: pointer;
+}
+.sixth button:hover{
+    font-weight: bolder;
+}
+.flex-all-center{
+        height: 7vh;
+        background: rgb(28, 29, 31);
+        color: white;
+        margin-top: 20px ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+ </style>
+  </head>
+
+
+<body>
+
+<header>
+      <nav>
+          <div class="logo">
+            <img src="images/imglogo3.png" alt="" width="80px">
+          </div>
+       
+          <ul>
+            <li><a href="index">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="contact">Contact</a></li>
+        
+            <div class="sixth">
+              <a href="prediction_form"><big><button> CLICK HERE FOR PREDICTION </button></big></a>
+            </div>
+          </ul>   
+      </nav>    
+</header>
+<br>
+
+<main class="container">
+
+      <div class="zero">
+         <img src="images/imgheader.png" width="80%" height="400px" >
+      </div>
+<br>
+
+              <!--what is breast cancer-->
+            
+    <div class="first">
+        <h2><u> WHAT IS BREAST CANCER ?</u></h2>
+
+        <p>Breast cancer is the most common invasive cancer in females. It is also a leading cause of cancer deaths among females. It's important to understand that most breast lumps are benign and not cancer (malignant).
+            Non-cancer breast tumors are abnormal growths, but they do not spread outside of the breast. They are not life threatening, but some types of benign breast lumps can increase a woman's risk of getting breast cancer. Any breast lump or change needs to be checked by a health care professional to find out if it is benign or malignant (cancer) and if it might affect yours future cancer risk.</p>
+<br>   
+    </div>
+         <div class="image1">
+            <img src="images/imgnormal.jpeg" alt="error" width="450"> 
+         </div>  
+<br>        
+<hr>
+
+               <!--symptoms of breast cancer-->
+
+    <div class="symptoms">
+        <h2><u> What Are the Symptoms of Breast Cancer? </u></h2>
+
+        <p>Different people have different symptoms of breast cancer. Some people do not have any signs or symptoms at all.
+
+              Some warning signs of breast cancer are—
+          <ul>
+             <li> New lump in the breast or underarm (armpit).</li>
+             <li> Thickening or swelling of part of the breast.</li>
+             <li> Irritation or dimpling of breast skin.</li>
+             <li> Redness or flaky skin in the nipple area or the breast.</li>
+             <li> Pulling in of the nipple or pain in the nipple area.</li>
+             <li> Nipple discharge other than breast milk, including blood.</li>
+             <li> Any change in the size or the shape of the breast.</li>
+             <li> Pain in any area of the breast.</li>
+             <li> Keep in mind that these symptoms can happen with other conditions that are not cancer.</li>
+          </ul>
+<br>
+        <b> If you have any signs or symptoms that worry you, be sure to see your doctor right away.</b>
+        </p>
+<br> 
+    </div> 
+         <div class="image2">
+            <img src="images/imgsymptom.jpeg" alt="error" width="400">
+         </div>    
+<br>          
+<hr>
+
+            <!--diagnosis of breast cancer-->
+
+    <div class="diagnose">
+        <h2><u>Breast Cancer: Diagnosis</u></h2>
+        <p> Doctors use many tests to find, or diagnose, breast cancer. They may also do tests to learn if the cancer has spread to a part of the body other than the breast and the lymph nodes under the arm. If this happens, it is called a metastasis (see the Metastatic Breast Cancer guide for more information). Doctors may also do tests to learn which treatments could work best.
+            For most types of cancer, a biopsy is the only sure way for the doctor to know if an area of the body has cancer. In a biopsy, the doctor takes a small sample of tissue for testing in a laboratory.
+            This section describes options for diagnosing breast cancer. Not all tests listed below will be used for every person. Your doctor may consider these factors when choosing a diagnostic test:</p>
+<br>
+          <ul>
+            <li>The type of cancer suspected</li>
+            <li> Your signs and symptoms</li>
+            <li>Your age and general health</li>
+            <li>The results of earlier medical tests</li>
+          </ul>
+ <br>
+    </div>   
+          <div class="image3">
+             <img src="images/imgdiagnosis.png" alt="error" width="600px">
+          </div>
+    <div class="diagnose">
+        <p>The series of tests needed to evaluate a possible breast cancer usually begins when a woman or their doctor discover a mass or abnormal calcifications on a screening mammogram, or a lump or nodule in the breast during a clinical or self-examination. Less commonly, a woman might notice a red or swollen breast or a mass or nodule under the arm.</p>
+    </div>
+ <br>   
+ <hr>
+
+              <!--benign breast-->
+
+    <div class="benign">
+        <h2> <u>What is benign breast tumour?</u></h2>
+
+        <p>If you feel a lump in your breast, your first thought may be that you have breast cancer. Fortunately, a majority of breast lumps are benign, meaning they're not cancerous. </p>
+
+        <p> Both women and men can develop benign (noncancerous) breast lumps. This condition is known as benign breast disease. While these breast changes aren't cancerous or life-threatening, they may increase your risk of developing breast cancer later on.</p>
+
+                <!--benign breast tumour-->
+
+        <h2> <u>What causes benign breast tumour?</u></h2>
+        <p>Common causes of noncancerous breast lumps include:</p>
+ <br>
+        <ul>
+            <li> Changes in breast tissue (fibrocystic breast changes)</li>
+            <li>Breast infection (mastitis)</li>
+            <li>Scar tissue from a breast injury.</li>
+            <li>Hormone fluctuations, especially during menstruation, pregnancy or menopause.</li>
+            <li>Medication use, such as hormonal contraceptives (birth control pills) and hormone replacement therapy.</li>
+        </ul>
+<br>   
+    </div> 
+        <div class="image4">
+          <img src="images/imgbegnin tumour.jpg" alt="error" width="450">
+        </div>    
+ <br>      
+<hr>
+
+            <!--malignant cancer-->
+
+    <div class="malignant">
+        <h2> <u>What is malignant breast tumour?</u></h2>
+
+        <p>Malignant tumors have cells that grow uncontrollably and spread locally and/or to distant sites. Malignant tumors are cancerous (ie, they invade other sites). They spread to distant sites via the bloodstream or the lymphatic system. This spread is called metastasis. Metastasis can occur anywhere in the body and most commonly is found in the liver, lungs, brain, and bone.</p>
+
+        <p>Malignant tumors can spread rapidly and require treatment to avoid spread. If they are caught early, treatment is likely to be surgery with possible chemotherapy or radiotherapy. If the cancer has spread, the treatment is likely to be systemic, such as chemotherapy or immunotherapy.</p>
+<br>
+                  <!--malignant breast tumour-->
+
+        <h2> <u> What causes benign breast tumour?</u></h2>
+
+        <p>Since there is a wide range of benign breast diseases, there are multiple reasons why they occur. Some common reasons for the development of non cancerous breast conditions are:</p>
+            <br>
+        <ul>
+            <li>Changes in breast tissue that occur with age</li>
+            <li>Infection that affects the breasts</li>
+            <li>Scar tissue formed from a breast injury</li>
+            <li>Hormone fluctuations, especially during menstruation, pregnancy or menopause.</li>
+            <li>Side-effects of certain medication use, such as hormonal contraceptives (birth control pills) and hormone replacement therapy</li>
+            <li>Increased intake of caffeinated beverages</li>
+        </ul>
+<br>
+    </div>
+         <div class="image5">
+           <img src="images/imgmalignant tumor.webp" alt="error" width="450">
+         </div>
+    
+   
+    <div class="sixth">
+       <a href="prediction_form"><big><button> CLICK HERE FOR PREDICTION </button></big></a>
+    </div>
+
+</main>
+
+
+   <div>
+       <footer  class="flex-all-center">
+       <p>&copy; DATA TREKKERS 2022, BCAS</p>
+       </footer>
+   </div>
+
+</body>
+</html>
